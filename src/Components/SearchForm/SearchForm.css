@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 500px;
 }
 
 input {
   padding: 10px;
   height: 20px;
-  width: 200px;
+  width: 500px;
   border: 1px solid purple;
   margin: 10px;
   font-size: 18px;
@@ -27,15 +27,16 @@ input {
   background-color: whitesmoke;
   right: 10px;
   top: 52px;
-  width: 200px;
+  width: 500px;
 }
 
 .option {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+  width: 500px;
   padding: 5px;
+  cursor: pointer;
 }
 
 .option,
