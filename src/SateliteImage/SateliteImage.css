@@ -1,0 +1,5 @@
+.satelite-image {
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+}
