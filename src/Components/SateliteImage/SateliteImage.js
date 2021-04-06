@@ -4,14 +4,13 @@ import './SateliteImage.css'
 
 export default function SateliteImage({src}) {
   const [loading, setLoading] = useState(false);
-
   return (
     <div>
-      {loading ? null : <Loader />}
+      {loading ? <Loader /> : null}
       <img className='satelite-image'
-        style={loading ? {} : { display: 'none' }}
+        // style={loading ? {} : { display: 'none' }}
         src={src}
-        onLoad={() => setLoading(true)}
+        onLoad={() => setLoading(false)}
       />
     </div>
   )
