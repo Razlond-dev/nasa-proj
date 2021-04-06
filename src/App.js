@@ -42,7 +42,7 @@ function App() {
       {loading ? <Loader /> : <SateliteImage src={imageUrl} />}
       <div className="d-flex" style={{flexDirection: 'column', justifyContent: 'space-between'}}>
         <SearchForm setData={(params) => setParams(params)} />
-        <Map lat={params[1].toFixed(2)} lon={params[0].toFixed(2)} />
+        <Map zoom={3} center={[params[1].toFixed(2), params[0].toFixed(2)]} />
         
       </div>
     </div>
@@ -50,3 +50,5 @@ function App() {
 }
 
 export default App;
+
+// lat={params[1].toFixed(2)} lon={params[0].toFixed(2)
