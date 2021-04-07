@@ -1,0 +1,11 @@
+.satelite-container {
+  min-width: 45vw;
+  height: 45vw;
+  margin-right: 20px;
+}
+
+.satelite-image {
+  width: 45vw;
+  height: 45vw;
+  object-fit: cover;
+}
