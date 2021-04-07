@@ -1,0 +1,10 @@
+.navbar-text {
+  color: rgb(253, 230, 230);
+  margin: auto 0;
+  width: 400px;
+}
+
+.navbar-text.right {
+  text-align: right;
+  width: 90%;
+}

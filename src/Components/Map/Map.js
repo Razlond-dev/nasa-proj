@@ -1,26 +1,34 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { useGlobalContext } from "../../context";
 
-function ChangeView(center, zoom) {
+function ChangeView(center) {
   const map = useMap()
   map.panTo(center.center);
   return null
   }
 
-export default function Map({ center, zoom }) {  
+export default function Map() {  
+
+  const { coords } = useGlobalContext()
+
+  let coordsObj = {
+    lon: coords[0],
+    lat: coords[1]
+  }
 
   return (
     <MapContainer
-      center={center}
+      center={coordsObj}
       zoom={2}
       scrollWheelZoom={true}
     >
-      <ChangeView center={center} zoom={zoom} /> 
+      <ChangeView center={coordsObj} /> 
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={center}>
+      <Marker position={coordsObj}>
         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
